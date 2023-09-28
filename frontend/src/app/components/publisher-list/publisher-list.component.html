@@ -1,0 +1,147 @@
+<div class="section">
+  <div class="input-group mb3" *ngIf="!newPub">
+    <button class="btn btn-primary" type="button" (click)="addPublisher()"> Add Publisher</button>
+  </div>
+  <div *ngIf="newPub">
+    <app-add-publisher></app-add-publisher>
+  </div>
+</div>
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
+    <mat-header-cell *matHeaderCellDef> {{column}} </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element[column]}} </mat-cell>
+  </ng-container>
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="showCount">
+    <mat-header-cell *matHeaderCellDef> Show Count </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.showCount}} </mat-cell>
+  </ng-container>
+
+  <!-- Current Usage Column -->
+  <ng-container matColumnDef="currentUsage">
+    <mat-header-cell *matHeaderCellDef>Current Usage</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.currentUsage }}</mat-cell>
+  </ng-container>
+
+  <!-- Remaining Usage Column -->
+  <ng-container matColumnDef="remainingUsage">
+    <mat-header-cell *matHeaderCellDef>Remaining Usage</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.remainingUsage }}</mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <!-- <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>mat-cell>
+  </ng-container> -->
+
+  <!-- Weight Column -->
+  <!-- <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef> Email </mat-cell>
+    <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>mat-cell>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="website">
+    <mat-header-cell *matHeaderCellDef> Website </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.website}} </mat-cell>mat-cell>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="instance">
+    <mat-header-cell *matHeaderCellDef> Instance </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.instance}} </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="type">
+    <mat-header-cell *matHeaderCellDef> Type </mat-cell>
+    <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>mat-cell>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="agency">
+    <mat-header-cell *matHeaderCellDef> Agency </mat-cell>
+    <mat-cell *matCellDef="let element"> {{element.agency}} </mat-cell>mat-cell>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="podApiKey">
+    <mat-header-cell *matHeaderCellDef> Podscribe API Key </mat-cell>
+    <mat-cell *matCellDef="let element"> {{element.podApiKey}} </mat-cell>mat-cell>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="apiKey">
+      <mat-header-cell *matHeaderCellDef> Domain API Key </mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.apiKey}} </mat-cell>mat-cell>
+    </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="user">
+    <mat-header-cell *matHeaderCellDef> Account ID </mat-cell>
+    <mat-cell *matCellDef="let element"> {{element.user}} </mat-cell>mat-cell>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="imported">
+    <mat-header-cell *matHeaderCellDef> Imported </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.imported}} </mat-cell>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="get">
+    <mat-header-cell *matHeaderCellDef> Get </mat-header-cell>
+    <mat-cell *matCellDef="let element"> <button class="btn btn-outline-secondary" type="button"
+        (click)="retrieveShows(element.id)">
+        Get
+      </button> </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="import">
+    <mat-header-cell *matHeaderCellDef> Import </mat-header-cell>
+    <mat-cell *matCellDef="let element"> <button *ngIf="!element.imported" class="btn btn-outline-secondary"
+        type="button" (click)="importShows(element.id,element.user)">
+        Import
+      </button>
+      <button *ngIf="element.imported" class="btn btn-outline-secondary" type="button">
+        Refresh
+      </button>
+    </mat-cell>
+  </ng-container>
+  <!-- Action Column -->
+  <ng-container matColumnDef="action">
+    <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button mat-button (click)="getUsageById(element)">Get Usage</button>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Previous Month's Usage Column -->
+  <ng-container matColumnDef="previousUsage">
+    <mat-header-cell *matHeaderCellDef>Previous Month's Usage</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button mat-button (click)="getPreviousMonthUsageById(element)">View</button>
+    </mat-cell>
+  </ng-container>
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="delete">
+    <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+    <mat-cell *matCellDef="let element"> <button class="btn btn-outline-secondary" type="button"
+        (click)="deletePublisher(element.id)">
+        Delete
+      </button> </mat-cell>
+  </ng-container> -->
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let element; columns: displayedColumns;" class="example-element-row"></mat-row>
+  <!-- <mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></mat-row> -->
+</mat-table>
+
+<!-- Pagination -->
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>

@@ -1,0 +1,19 @@
+#node_module
+backend/node_modules
+frontend/node_modules
+
+#environment files
+backend/.env
+backend/.env.prod
+backend/.env.dev
+frontend/src/environments
+
+#package lock
+backend/package-lock.json
+frontend/package-lock.json
+
+#build files
+.DS_Store
+frontend/.angular
+
+*.log

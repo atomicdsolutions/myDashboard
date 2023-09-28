@@ -1,0 +1,447 @@
+{
+    "enable_markdown": false,
+    "exit_survey": null,
+    "theme_settings": null,
+    "owner": {
+        "href": "https://api.simplecast.com/owners/a8afda44-9859-42d0-8259-8fb735e8953d",
+        "user": null,
+        "update": {
+            "method": "POST",
+            "input": {
+                "name": {},
+                "email": {}
+            },
+            "action": "https://api.simplecast.com/owners/a8afda44-9859-42d0-8259-8fb735e8953d"
+        },
+        "name": "Pamela Silva & Karen Comas",
+        "id": "a8afda44-9859-42d0-8259-8fb735e8953d",
+        "email": "oliendo@univision.net"
+    },
+    "dashboard_link": "https://dashboard.simplecast.com/accounts/4330f47c-4f4c-4d4a-8d54-ac73968c9100/shows/86f02c5d-4f08-4d6c-9a32-07b35f72decb",
+    "is_explicit": false,
+    "time_zone_abbreviation": "UTC",
+    "adswizz_enabled": true,
+    "donation": null,
+    "updated_at": "2022-06-29T10:00:12",
+    "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb?is_pending_invitation=false",
+    "background_image_url": null,
+    "midroll_marker_alerts_enabled": false,
+    "enable_feed": true,
+    "imported_at": "2022-05-20T22:07:39",
+    "sponsors": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/sponsors"
+    },
+    "default_marker_max_duration_milliseconds_pre": null,
+    "subscription_item": {
+        "href": "https://api.simplecast.com/subscriptions/86f02c5d-4f08-4d6c-9a32-07b35f72decb/items/86f02c5d-4f08-4d6c-9a32-07b35f72decb",
+        "update": null
+    },
+    "feed_redirect_url": null,
+    "subtitle": null,
+    "embed_player_types": [
+        "slim",
+        "playlist",
+        "standard"
+    ],
+    "bitrates": [
+        128
+    ],
+    "created_at": "2022-05-20T22:07:39",
+    "account": {
+        "owner": {
+            "name": "Uforia Podcasts",
+            "image_url": "https://image.simplecastcdn.com/images/9cba4194-6d3a-42bb-ab05-8e998c4c4f93/dce46a83-af7b-43cc-8db1-3cb1342d6100/uforia-podcasts-logo-horizontal.jpg",
+            "email": "podcast@univision.net"
+        },
+        "name": null,
+        "is_default": false,
+        "is_custom_plan": true,
+        "id": "4330f47c-4f4c-4d4a-8d54-ac73968c9100",
+        "href": "https://api.simplecast.com/accounts/4330f47c-4f4c-4d4a-8d54-ac73968c9100"
+    },
+    "time_zone_offset": 0,
+    "bitrate": 128,
+    "update": null,
+    "background_image_path": null,
+    "image_path": "/prod/images/d454ec0f-b584-480f-a780-1939ac2b8eb6/d6fe295e-985c-4a8b-8e9b-77332027b478/cover-04.jpg",
+    "invitations": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/invitations"
+    },
+    "rss_noindex": false,
+    "authors": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/authors",
+        "create": {
+            "method": "POST",
+            "input": {
+                "youtube_link": {},
+                "youtube_handle": {},
+                "website_link": {},
+                "website_domain": {},
+                "user_id": {},
+                "twitter_link": {},
+                "twitter_handle": {},
+                "name": {
+                    "required": true
+                },
+                "instagram_link": {},
+                "instagram_handle": {},
+                "facebook_link": {},
+                "facebook_handle": {},
+                "email": {}
+            },
+            "action": "https://api.simplecast.com/accounts/4330f47c-4f4c-4d4a-8d54-ac73968c9100/authors?podcast=86f02c5d-4f08-4d6c-9a32-07b35f72decb"
+        },
+        "collection": [
+            {
+                "href": "https://api.simplecast.com/authors/51073d2b-a48f-4d7b-b30c-ac7164ecc05e",
+                "remove": null,
+                "name": "Pamela Silva & Karen Comas",
+                "id": "51073d2b-a48f-4d7b-b30c-ac7164ecc05e"
+            }
+        ]
+    },
+    "keywords": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/keywords",
+        "create": null,
+        "collection": []
+    },
+    "site": {
+        "href": "https://api.simplecast.com/sites/09d93b28-6f9b-488a-8f5e-dbc2c3121cf6",
+        "subdomain": "motherish",
+        "id": "09d93b28-6f9b-488a-8f5e-dbc2c3121cf6",
+        "cname_url": null
+    },
+    "promos": null,
+    "feed_url": "https://feeds.simplecast.com/q7ej7L6i",
+    "has_billing": true,
+    "recast_color": null,
+    "subscription_data": {
+        "href": "https://api.simplecast.com/subscriptions/86f02c5d-4f08-4d6c-9a32-07b35f72decb"
+    },
+    "rss_limit": 600,
+    "current_user_permission": {
+        "rank": null,
+        "name": null,
+        "labels": [],
+        "label": null,
+        "can_view_episodes": true,
+        "can_view_analytics": true,
+        "can_view_ad_creatives": true,
+        "can_view": true,
+        "can_upload": false,
+        "can_publish": false,
+        "can_edit_permissions": false,
+        "can_edit_markers": false,
+        "can_edit_advanced": true,
+        "can_edit_admin_permissions": false,
+        "can_edit_ad_creatives": false,
+        "can_edit": false,
+        "can_delete": false,
+        "can_create_episode": true,
+        "app_keys": [],
+        "app_key": null
+    },
+    "subscription": {
+        "href": "https://api.simplecast.com/subscriptions/86f02c5d-4f08-4d6c-9a32-07b35f72decb/items/86f02c5d-4f08-4d6c-9a32-07b35f72decb"
+    },
+    "categories": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/categories",
+        "create": {
+            "method": "POST",
+            "input": {
+                "categories": {
+                    "type": "select",
+                    "required": true,
+                    "options": [
+                        {
+                            "value": "arts",
+                            "label": "Arts"
+                        },
+                        {
+                            "value": "business",
+                            "label": "Business"
+                        },
+                        {
+                            "value": "comedy",
+                            "label": "Comedy"
+                        },
+                        {
+                            "value": "education",
+                            "label": "Education"
+                        },
+                        {
+                            "value": "fiction",
+                            "label": "Fiction"
+                        },
+                        {
+                            "value": "government",
+                            "label": "Government"
+                        },
+                        {
+                            "value": "health_and_fitness",
+                            "label": "Health & Fitness"
+                        },
+                        {
+                            "value": "history",
+                            "label": "History"
+                        },
+                        {
+                            "value": "kids_and_family",
+                            "label": "Kids & Family"
+                        },
+                        {
+                            "value": "leisure",
+                            "label": "Leisure"
+                        },
+                        {
+                            "value": "music",
+                            "label": "Music"
+                        },
+                        {
+                            "value": "news",
+                            "label": "News"
+                        },
+                        {
+                            "value": "religion_and_spirituality",
+                            "label": "Religion & Spirituality"
+                        },
+                        {
+                            "value": "science",
+                            "label": "Science"
+                        },
+                        {
+                            "value": "society_and_culture",
+                            "label": "Society & Culture"
+                        },
+                        {
+                            "value": "sports",
+                            "label": "Sports"
+                        },
+                        {
+                            "value": "tv_and_film",
+                            "label": "TV & Film"
+                        },
+                        {
+                            "value": "technology",
+                            "label": "Technology"
+                        },
+                        {
+                            "value": "true_crime",
+                            "label": "True Crime"
+                        }
+                    ]
+                }
+            },
+            "action": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/categories"
+        },
+        "collection": [
+            {
+                "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/categories/83f7d427-eda5-4314-9b4a-577227efcedb",
+                "value": "kids_and_family",
+                "subcategories": {
+                    "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/categories/83f7d427-eda5-4314-9b4a-577227efcedb/subcategories",
+                    "create": null,
+                    "collection": [
+                        {
+                            "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/categories/83f7d427-eda5-4314-9b4a-577227efcedb/subcategories/056d8ba9-7fc8-4b2a-bde8-a520cfd3129b",
+                            "value": "parenting",
+                            "label": "Parenting"
+                        }
+                    ]
+                },
+                "label": "Kids & Family",
+                "id": "83f7d427-eda5-4314-9b4a-577227efcedb",
+                "created_at": "2022-05-20T22:07:39.652130"
+            }
+        ]
+    },
+    "ad_creatives": {
+        "href": "https://api.simplecast.com/accounts/4330f47c-4f4c-4d4a-8d54-ac73968c9100/ad_creatives?podcast_id=86f02c5d-4f08-4d6c-9a32-07b35f72decb"
+    },
+    "default_marker_ad_limit_post": 1,
+    "title": "Motherish ",
+    "default_marker_ad_limit_post_enabled": true,
+    "distribution_channels": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/distribution_channels"
+    },
+    "type": "episodic",
+    "episodes": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/episodes?preview=true",
+        "count": 75,
+        "audio": {
+            "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/episodes/audio"
+        }
+    },
+    "copyright": "Pamela Silva & Karen Comas",
+    "allow_mp3_downloads": false,
+    "playlist": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/playlist"
+    },
+    "published_at": "2022-05-20T22:08:22",
+    "status": "published",
+    "description": "A podcast about motherhood and all its adventures by first-time, working moms, Pamela Silva and Karen Comas. ",
+    "language": "en",
+    "id": "86f02c5d-4f08-4d6c-9a32-07b35f72decb",
+    "default_marker_ad_limit_pre_enabled": true,
+    "default_marker_ad_limit_mid": 1,
+    "time_zone": "Etc/UTC",
+    "default_marker_max_duration_milliseconds_mid": null,
+    "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?podcast=86f02c5d-4f08-4d6c-9a32-07b35f72decb"
+    },
+    "is_private": false,
+    "image_url": "https://image.simplecastcdn.com/images/d454ec0f-b584-480f-a780-1939ac2b8eb6/d6fe295e-985c-4a8b-8e9b-77332027b478/cover-04.jpg",
+    "is_delinquent": false,
+    "default_marker_ad_limit_pre": 1,
+    "seasons": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/seasons"
+    },
+    "user_permissions": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/user_permissions"
+    },
+    "features": {
+        "href": "https://api.simplecast.com/feature_sets/feab0b8a-5394-4676-825c-3b40255db8ea"
+    },
+    "delete": null,
+    "intro_outro": null,
+    "creator": {
+        "href": "https://api.simplecast.com/users/9cba4194-6d3a-42bb-ab05-8e998c4c4f93"
+    },
+    "feeds": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/feeds",
+        "create": {
+            "method": "POST",
+            "input": {},
+            "action": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/feeds",
+            "input": {
+                "title": {},
+                "rss_limit": {},
+                "redirect_url": {},
+                "preferred_bitrate": {
+                    "value": "asdf",
+                    "type": "select",
+                    "options": [
+                        {
+                            "value": null,
+                            "label": "select a bitrate"
+                        },
+                        {
+                            "value": 128,
+                            "label": "128"
+                        }
+                    ]
+                },
+                "no_index": {
+                    "type": "checkbox"
+                },
+                "name": {
+                    "required": true
+                },
+                "is_explicit": {
+                    "type": "checkbox"
+                },
+                "is_ad_free": {
+                    "type": "checkbox"
+                },
+                "has_ad_free_variant": {
+                    "type": "checkbox"
+                },
+                "external_feed_url": {},
+                "enclosure_url": {},
+                "enabled": {
+                    "type": "checkbox"
+                },
+                "enable_episode_numbers": {
+                    "type": "checkbox"
+                },
+                "copy_episodes_from": {
+                    "value": "none",
+                    "type": "select",
+                    "options": [
+                        {
+                            "value": null,
+                            "label": "none"
+                        },
+                        {
+                            "value": "f6868a8b-372e-4839-9870-08b359f21c12",
+                            "label": "Default (f6868a8b-372e-4839-9870-08b359f21c12)"
+                        }
+                    ]
+                }
+            }
+        },
+        "collection": [
+            {
+                "href": "https://api.simplecast.com/feeds/f6868a8b-372e-4839-9870-08b359f21c12",
+                "update": {
+                    "method": "POST",
+                    "input": {},
+                    "action": "https://api.simplecast.com/feeds/f6868a8b-372e-4839-9870-08b359f21c12",
+                    "input": {
+                        "title": {},
+                        "rss_limit": {},
+                        "redirect_url": {},
+                        "preferred_bitrate": {
+                            "value": "asdf",
+                            "type": "select",
+                            "options": [
+                                {
+                                    "value": 128,
+                                    "label": "select a bitrate"
+                                }
+                            ]
+                        },
+                        "no_index": {
+                            "type": "checkbox"
+                        },
+                        "name": {},
+                        "is_explicit": {
+                            "type": "checkbox"
+                        },
+                        "is_ad_free": {
+                            "type": "checkbox"
+                        },
+                        "has_ad_free_variant": {
+                            "type": "checkbox"
+                        },
+                        "external_feed_url": {},
+                        "enclosure_url": {},
+                        "enabled": {
+                            "type": "checkbox"
+                        },
+                        "enable_episode_numbers": {
+                            "type": "checkbox"
+                        }
+                    }
+                },
+                "title": null,
+                "rss_limit": null,
+                "reimport": null,
+                "regenerate_ad_free": null,
+                "redirect_url": null,
+                "published_at": "2022-05-20T22:08:22Z",
+                "preferred_bitrate": 128,
+                "no_index": false,
+                "name": "Default",
+                "is_primary": true,
+                "is_explicit": false,
+                "is_ad_free": false,
+                "id": "f6868a8b-372e-4839-9870-08b359f21c12",
+                "has_ad_free_variant": false,
+                "feed_url": "https://feeds.simplecast.com/q7ej7L6i",
+                "external_feed_url": null,
+                "enclosure_url": "https://chrt.fm/track/CB2915/",
+                "enabled": true,
+                "enable_episode_numbers": true,
+                "delete": null,
+                "ad_free_feed_url": "https://feeds.simplecast.com/q7ej7L6i-F_zysFS"
+            }
+        ]
+    },
+    "enclosure_url": "https://chrt.fm/track/CB2915/",
+    "external_feed_url": null,
+    "default_marker_max_duration_milliseconds_post": null,
+    "templates": {
+        "href": "https://api.simplecast.com/podcasts/86f02c5d-4f08-4d6c-9a32-07b35f72decb/templates"
+    }
+}

@@ -1,0 +1,8 @@
+<div>
+    <h1>File Downloader</h1>
+    <input type="text" [(ngModel)]="url" placeholder="Enter the URL of the file to download">
+    <button (click)="getMetadata()">Download File</button>
+  </div>
+  <div *ngIf="metadata">
+    <h2>Metadata</h2>
+    <p>{{metadata}}</p>

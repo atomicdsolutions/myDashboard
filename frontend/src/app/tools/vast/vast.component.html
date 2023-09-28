@@ -1,0 +1,19 @@
+<section><div class="wrapper">
+    <mat-card>
+        <mat-card-title-group>
+            <mat-card-title>Vast Test</mat-card-title>
+        </mat-card-title-group>
+        <mat-card-content>
+            <mat-form-field>
+                <mat-label>XML Url:</mat-label>
+                <input matinput [(ngModel)]="xmlUrl" placeholder="Enter XML Url">
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions align="start">
+            <button mat-button color="primary" (click)="getVast()">Get Vast response</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+Response time: {{ responseTime}} ms
+<pre *ngIf="jsonData">{{jsonData | json}}</pre>
+</section>

@@ -1,0 +1,118 @@
+<div class="section">
+  <div class="input-group mb3" *ngIf="!newPub">
+    <button class="btn btn-primary" type="button" (click)="addPublisher()"> Add Publisher</button>
+  </div>
+  <div *ngIf="newPub">
+    <app-add-publisher></app-add-publisher>
+  </div>
+</div>
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
+    <mat-header-cell *matHeaderCellDef> {{column}} </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element[column]}} </mat-cell>
+  </ng-container>
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <!-- <ng-container matColumnDef="showCount">
+    <th mat-header-cell *matHeaderCellDef> Show Count </th>
+    <td mat-cell *matCellDef="let element"> {{element.showCount}} </td>
+  </ng-container> -->
+
+  <!-- Name Column -->
+  <!-- <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container> -->
+
+  <!-- Weight Column -->
+  <!-- <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="website">
+    <th mat-header-cell *matHeaderCellDef> Website </th>
+    <td mat-cell *matCellDef="let element"> {{element.website}} </td>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="instance">
+    <th mat-header-cell *matHeaderCellDef> Instance </th>
+    <td mat-cell *matCellDef="let element"> {{element.instance}} </td>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef> Type </th>
+    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="agency">
+    <th mat-header-cell *matHeaderCellDef> Agency </th>
+    <td mat-cell *matCellDef="let element"> {{element.agency}} </td>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="podApiKey">
+    <th mat-header-cell *matHeaderCellDef> Podscribe API Key </th>
+    <td mat-cell *matCellDef="let element"> {{element.podApiKey}} </td>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="apiKey">
+      <th mat-header-cell *matHeaderCellDef> Domain API Key </th>
+      <td mat-cell *matCellDef="let element"> {{element.apiKey}} </td>
+    </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="user">
+    <th mat-header-cell *matHeaderCellDef> Account ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.user}} </td>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="imported">
+    <mat-header-cell *matHeaderCellDef> Imported </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.imported}} </mat-cell>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="get">
+    <mat-header-cell *matHeaderCellDef> Get </mat-header-cell>
+    <mat-cell *matCellDef="let element"> <button class="btn btn-outline-secondary" type="button"
+        (click)="retrieveShows(element.id)">
+        Get
+      </button> </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="import">
+    <mat-header-cell *matHeaderCellDef> Import </mat-header-cell>
+    <mat-cell *matCellDef="let element"> <button *ngIf="!element.imported" class="btn btn-outline-secondary"
+        type="button" (click)="importShows(element.id,element.user)">
+        Import
+      </button>
+      <button *ngIf="element.imported" class="btn btn-outline-secondary" type="button">
+        Refresh
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="delete">
+    <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+    <mat-cell *matCellDef="let element"> <button class="btn btn-outline-secondary" type="button"
+        (click)="deletePublisher(element.id)">
+        Delete
+      </button> </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let element; columns: displayedColumns;" class="example-element-row"></mat-row>
+  <mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></mat-row>
+</mat-table>

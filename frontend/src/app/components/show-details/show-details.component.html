@@ -1,0 +1,59 @@
+<div *ngIf="viewMode; else editable">
+  <div *ngIf="currentShow.id">
+    <h4>Show</h4>
+    <div>
+      <label><strong>name:</strong></label> {{ currentShow.name }}
+    </div>
+    <div>
+      <label><strong>showCount:</strong></label>
+      {{ currentShow.showCount }}
+    </div>
+    <div>
+      <label><strong>Status:</strong></label>
+      {{ currentShow.published ? "Published" : "Pending" }}
+    </div>
+    <a class="badge badge-warning" routerLink="/Shows/{{ currentShow.id }}">
+      Edit
+    </a>
+  </div>
+  <div *ngIf="!currentShow">
+    <br />
+    <p>Please click on a Show...</p>
+  </div>
+</div>
+<ng-template #editable>
+  <div *ngIf="currentShow.id" class="edit-form">
+    <h4>Show</h4>
+    <form>
+      <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="currentShow.name" name="name" />
+      </div>
+      <div class="form-group">
+        <label for="showCount">showCount</label>
+        <input type="text" class="form-control" id="showCount" [(ngModel)]="currentShow.showCount" name="showCount" />
+      </div>
+      <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentShow.published ? "Published" : "Pending" }}
+      </div>
+    </form>
+    <!-- <button class="badge badge-primary mr-2" *ngIf="currentShow.published" (click)="updatePublished(false)">
+      UnPublish
+    </button>
+    <button *ngIf="!currentShow.published" class="badge badge-primary mr-2" (click)="updatePublished(true)">
+      Publish
+    </button> -->
+    <button class="badge badge-danger mr-2" (click)="deleteShow()">
+      Delete
+    </button>
+    <button type="submit" class="badge badge-success mb-2" (click)="updateShow()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  <div *ngIf="!currentShow.id">
+    <br />
+    <p>Cannot access this Show...</p>
+  </div>
+</ng-template>

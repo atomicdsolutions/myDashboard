@@ -1,0 +1,35 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="name">Show Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="show.name" name="name" />
+      </div>
+      <div class="form-group">
+        <label for="showCount">Show Count</label>
+        <input class="form-control" id="showcount" required [(ngModel)]="show.showCount" name="showcount" />
+      </div>
+      <div class="form-group">
+        <label for="awCollectionId">awCollectionId</label>
+        <input class="form-control" id="awCollectionId" required [(ngModel)]="show.awCollectionId" name="awCollectionId" />
+      </div>
+      <div class="form-group">
+        <label for="published">Published</label>
+        <input class="form-control" id="published" required [(ngModel)]="show.published" name="published" />
+      </div>
+      <div class="form-group">
+        <label for="publisherId">publisherId</label>
+        <input class="form-control" id="publisherId" required [(ngModel)]="show.publisherId" name="publisherId" />
+      </div>
+      <div class="form-group">
+        <label for="rssFeed">rssFeed</label>
+        <input class="form-control" id="rssFeed" required [(ngModel)]="show.rssFeed" name="rssFeed" />
+      </div>
+      <button (click)="saveShow()" class="btn btn-success">Submit</button>
+    </div>
+    <div *ngIf="submitted">
+      <h4>Tutorial was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newShow()">Add</button>
+    </div>
+  </div>
+</div>

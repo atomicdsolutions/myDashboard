@@ -1,0 +1,105 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>New Publisher Information</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="submit-form">
+      <!-- Add a button to toggle between manual input and CSV upload -->
+      <button (click)="showCSV = !showCSV">Toggle CSV Upload</button>
+
+      <!-- Show manual input form -->
+      <div *ngIf="!showCSV && !submitted">
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Customer Account Name</mat-label>
+              <input matInput id="name" required [(ngModel)]="pub.name" name="name">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Email: (TAM email address)</mat-label>
+              <input matInput id="email" required [(ngModel)]="pub.email" name="email" />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Website: (url value for publisher – needs to match location of ads.txt)
+              </mat-label>
+              <input matInput id="website" required [(ngModel)]="pub.website" name="website" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Instance Name (lower case)</mat-label>
+              <input matInput id="instance" required [(ngModel)]="pub.instance" name="instance" />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Type: (e.g. Podcast)</mat-label>
+              <input matInput id="type" required [(ngModel)]="pub.type" name="type" />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Agency ID: (ID of agency where publisher will be created within the instance)
+              </mat-label>
+              <input matInput id="agency" required [(ngModel)]="pub.agency" name="agency" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Domain API key</mat-label>
+              <input matInput id="apiKey" required [(ngModel)]="pub.apiKey" name="apiKey" />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Podscribe API Key</mat-label>
+              <input matInput id="podApiKey" required [(ngModel)]="pub.podApiKey" name="podApiKey" />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Simplecast Account ID </mat-label>
+              <input matInput id="user" required [(ngModel)]="pub.user" name="user" />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>AWS API Key </mat-label>
+              <input matInput id="awsApikey" required [(ngModel)]="pub.awsApikey" name="awsApikey" />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>AWS API Usage Plan </mat-label>
+              <input matInput id="awsApiUsagePlan" required [(ngModel)]="pub.awsApiUsagePlan" name="awsApiUsagePlan" />
+            </mat-form-field>
+          </div>
+        </div>
+        <button (click)="savePublisher()" class="btn btn-success">Submit</button>
+      </div>
+     
+    </div>
+
+    <!-- Show CSV upload form -->
+    <div *ngIf="showCSV && !submitted">
+      <input type="file" (change)="handleFileInput($event)" />
+      <button (click)="addPublishersFromCSV()" class="btn btn-success">Upload CSV</button>
+    </div>
+
+    <!-- Show submission success message -->
+    <div *ngIf="submitted">
+      <h4>Publisher was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newPublisher()">Add New</button>
+    </div>
+  </mat-card-content>
+</mat-card>
