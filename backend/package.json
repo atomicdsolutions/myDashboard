@@ -1,0 +1,32 @@
+{
+  "name": "podscribecheck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-api-gateway": "^3.414.0",
+    "@sendgrid/mail": "^7.7.0",
+    "aws-sdk": "^2.1459.0",
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "botocore": "^0.0.1",
+    "cors": "^2.8.5",
+    "dot-object": "^2.1.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.3.4",
+    "node-cron": "^3.0.0",
+    "node-id3": "^0.2.6",
+    "nodemailer": "^6.7.7",
+    "pm2": "^5.2.0",
+    "sleep-promise": "^9.1.0",
+    "winston": "^3.10.0"
+  }
+}
